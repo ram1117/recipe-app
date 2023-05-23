@@ -30,6 +30,7 @@
 ### Key Features <a name="key-features"></a>
 
 - Add Food
+- Add user
 - Add Recipe
 - User Authentication
 - View Food and Recipe
