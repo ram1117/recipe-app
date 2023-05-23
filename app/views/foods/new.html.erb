@@ -6,7 +6,7 @@
     </a>
   </div>
   <div>
-    <%= form_with model: [@user, @food], url: foods_path do |form| %>
+    <%= form_with model: [@user, @food], url: user_foods_path do |form| %>
       <div class="mb-2">
         <%=
           form.text_field :name,

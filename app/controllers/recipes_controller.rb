@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
-  layout 'recipes'
   def index
-    @recipes = Recipe.all
+    @user = User.first
+    @recipes = Recipe.where(user_id: @user.id)
   end
 
   def show

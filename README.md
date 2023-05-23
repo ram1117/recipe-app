@@ -20,8 +20,6 @@
 
 # 📰 Recipe-App <a name="about-project"></a>
 
-> Recipe-App is a web application that keeps track of all your recipes and ingredients. It allows you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
-
 ### Tech Stack <a name="tech-stack"></a>
 
 - <a href="https://www.ruby-lang.org/es/">ROR</a>
