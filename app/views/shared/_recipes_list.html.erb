@@ -1,0 +1,16 @@
+<div class="recipes-container">
+  <% if recipes.empty? %>
+  <h2>Please add some recipes</h2>
+  <% else %>
+  <ul class="recipes-list">
+    <% recipes.each do |recipe|%> 
+    <li class="recipes-list-item">
+      <div class="recipe-items-container">
+        <h2><%= recipe.name%></h2>
+        <p><%= recipe.description %></p>
+        <button>Remove</button>
+      </div>
+    </li>
+    <% end %> <% end %>
+  </ul>
+</div>
