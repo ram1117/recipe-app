@@ -1,7 +1,9 @@
 <section class="container">
   <div class="main">
     <a href="<%=request.path%>/new">
-    <%= button_to "Add food", new_food_path, class: "btn" %>
+    <%= link_to new_food_path(), class: "btn" do %>
+    <button class="form-button-primary">Add food</button>
+    <% end %>
     </a>
   </div>
   <table class="custom-table">
