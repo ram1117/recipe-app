@@ -5,13 +5,14 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:user_id], params[:id])
+    # update current user after devise
+    @recipe = Recipe.find(params[:id])
   end
 
   def update; end
 
   def destroy
-    @recipe = Recipe.find(params[:user_id], params[:id])
+    @recipe = Recipe.find(params[:id])
     @recipe.destroy
     respond_to do |format|
       format.html do

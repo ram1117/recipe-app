@@ -3,13 +3,15 @@
   <h2>Please add some recipes</h2>
   <% else %>
   <ul class="recipes-list">
-    <% recipes.each do |recipe|%> 
+    <% recipes.each do |recipe|%>
     <li class="recipes-list-item">
+      <%= link_to user_recipe_path(user_id: 2,id: recipe.id) do %>
       <div class="recipe-items-container">
         <h2><%= recipe.name%></h2>
         <p><%= recipe.description %></p>
         <button>Remove</button>
       </div>
+      <% end %>
     </li>
     <% end %> <% end %>
   </ul>
