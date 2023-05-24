@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
   def show
     # update current user after devise
     @recipe = Recipe.find(params[:id])
+    @recipe_foods = @recipe.foods
   end
 
   def update; end

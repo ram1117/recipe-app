@@ -1,0 +1,14 @@
+<div class="form-container">
+  <h1>Add new Ingredient</h1>
+  <div class="ingredient_form">
+    <%= form_with url:
+    user_recipe_recipe_foods_path(user_id:@current_user.id,recipe_id:@recipe.id),
+    method: :post,scope: :new_recipe_food,local:true  do |form| %> 
+    <%= form.label :name, "Select food" %> 
+    <%= form.collection_select :food_id, Food.all,:id,:name %> 
+    <%= form.label :qty, "Quantity" %> 
+    <%= form.text_field :qty %>
+    <%= form.submit%>
+    <% end %>
+  </div>
+</div>

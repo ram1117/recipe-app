@@ -14,6 +14,13 @@
   <p><%= @recipe.description %></p>
   <div class="recipe-show-btn-group">
     <button>Generate shopping list</button>
+    <%= link_to  new_user_recipe_recipe_food_path(user_id:1,recipe_id:@recipe.id) do %>
     <button>Add ingredient</button>
+    <% end %>
+  </div>
+  <div>
+    <% @recipe_foods.each do |food| %>
+    <p>food.name</p>
+    <% end %>
   </div>
 </div>
