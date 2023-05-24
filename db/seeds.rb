@@ -19,57 +19,57 @@ Food.create([
 
               {
 
-                name: 'Pizza',
+                name: 'banana',
 
-                measurement_unit: 'grams',
+                measurement_unit: 'units',
 
-                price: 22.99,
+                price: 1.5,
 
-                quantity: 2,
+                quantity: 10,
 
-                user_id: 1
+                user_id: user1.id
 
               },
 
               {
 
-                name: 'Burger',
+                name: 'flour',
 
-                measurement_unit: 'grams',
+                measurement_unit: 'kilograms',
 
-                price: 5.00,
+                price: 3.00,
+
+                quantity: 5,
+
+                user_id: user1.id
+
+              },
+
+              {
+
+                name: 'potatoes',
+
+                measurement_unit: 'kilograms',
+
+                price: 2.5,
 
                 quantity: 4,
 
-                user_id: 1
+                user_id: user1.id
 
               },
 
               {
 
-                name: 'Lasagna',
+                name: 'tuna',
 
-                measurement_unit: 'grams',
+                measurement_unit: 'kilograms',
 
-                price: 11.99,
+                price: 5,
 
-                quantity: 3,
+                quantity: 2,
 
-                user_id: 2
-
-              },
-
-              {
-
-                name: 'Jollof Rice',
-
-                measurement_unit: 'grams',
-
-                price: 25.00,
-
-                quantity: 1,
-
-                user_id: 2
+                user_id: user2.id
 
               }
 
@@ -92,7 +92,7 @@ Recipe.create([
                   instead. You can even go a step further and make chocolate banana bread.
                   " },
 
-                { user: user1, name: 'Kartoffelalat', preparation_time: 1.0, cooking_time: 2, public: true,
+                { user: user1, name: 'Kartoffelalat', preparation_time: 1.0, cooking_time: 2, public: false,
                   description: "
                   This authentic German potato salad comes from the Swabia region of southern
                   Germany where it remains one of the most popular and most delicious of all
