@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="ing-form-container">
   <h1>Add new Ingredient</h1>
   <div class="ingredient_form">
     <%= form_with url:
@@ -7,8 +7,11 @@
     <%= form.label :name, "Select food" %> 
     <%= form.collection_select :food_id, Food.all,:id,:name %> 
     <%= form.label :qty, "Quantity" %> 
-    <%= form.text_field :qty %>
+    <%= form.number_field :qty, min:0 %>
     <%= form.submit%>
     <% end %>
   </div>
+  <p>If the food item is not in the list, please add it here
+    <%= link_to "Add Food Item", new_user_food_path(user_id:1) %>
+  </p>
 </div>

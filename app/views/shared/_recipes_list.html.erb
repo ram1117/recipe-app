@@ -7,9 +7,13 @@
     <li class="recipes-list-item">
       <%= link_to user_recipe_path(user_id: userid,id: recipe.id) do %>
       <div class="recipe-items-container">
-        <h2><%= recipe.name%></h2>
-        <p><%= recipe.description %></p>
-        <button>Remove</button>
+        <div class="recipe-title-group">
+          <h2><%= recipe.name%></h2>
+          <button>Remove</button>
+        </div>
+        <div class="recipe-short-detail">
+          <p><%= recipe.description %></p>
+        </div>
       </div>
       <% end %>
     </li>

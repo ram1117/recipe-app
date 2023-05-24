@@ -14,20 +14,38 @@ class RecipeFoodsController < ApplicationController
                                    food_id: recipe_food_params['food_id']
                                  })
     if recipe_food.save
-      flash[:success] = 'posted successfully'
+      flash[:success] = 'created successfully'
     else
-      flash[:alert] = 'error creating post'
+      flash[:alert] = 'error creating recipe'
     end
     redirect_to user_recipe_path(user_id: user.id, id: recipe.id)
   end
 
-  def update; end
+  def edit
+    @current_user = User.first
+    @recipe = Recipe.find(params[:recipe_id])
+    @recipe_food = RecipeFood.find(params[:id])
+  end
 
-  def destroy; end
+  def update
+    @recipe_item = RecipeFood.find(params[:id])
+    @recipe_item.update_column(:quantity, update_food_params['qty'])
+    redirect_to user_recipe_path(user_id: params[:user_id], id: params[:recipe_id])
+  end
+
+  def destroy
+    recipe_food = RecipeFood.find(params[:id])
+    recipe_food.destroy
+    redirect_to user_recipe_path(user_id: params[:user_id], id: params[:recipe_id])
+  end
 end
 
 private
 
 def recipe_food_params
   params.require(:new_recipe_food).permit(:food_id, :qty)
+end
+
+def update_food_params
+  params.require(:update_recipe_food).permit(:qty)
 end
