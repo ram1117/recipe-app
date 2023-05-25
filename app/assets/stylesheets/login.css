@@ -1,0 +1,24 @@
+.login-page {
+  width: 40%;
+  margin: 5rem auto;
+  padding: 5rem;
+}
+
+.login-page h2 {
+  text-align: center;
+}
+
+.login-field,
+.login-actions {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 0.7rem;
+}
+
+.login-actions input {
+  padding: 0.8rem;
+}
