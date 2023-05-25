@@ -22,4 +22,17 @@ RSpec.describe Food, type: :model do
     @food.name = @food_two.name
     expect(@food).to be_valid
   end
+  it 'is not valid without measurement_unit' do
+    @food.measurement_unit = 'string'
+    expect(@food).to be_valid
+  end
+  it 'is not valid without price' do
+    @food.price
+    expect(@food).to be_valid
+  end
+  it 'is not valid without quantity' do
+    @food.quantity >= 0 && @food.quantity == 'integer'
+    expect(@food).to be_valid
+  end
 end
+# validates :quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
