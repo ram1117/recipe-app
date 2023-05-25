@@ -1,0 +1,17 @@
+<div class="public_recipes_container">
+  <h2>Public Recipes</h2>
+  <ul>
+    <% @recipes.each do |recipe| %>
+    <li>
+      <div>
+        <h4><%= link_to recipe.name, user_recipe_path(user_id:recipe.user_id,id:recipe.id), class:"links" %></h4>
+        <p>By: <%= recipe.user.name %></p>
+      </div>
+      <div class="right-side">
+        <p>Total food items: <%= recipe.total_food_items %></p>
+        <p>Total price: <%= number_to_currency(recipe.total_price) %></p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>

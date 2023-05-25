@@ -23,6 +23,7 @@
   </div>
   
   <p class="recipe-detail"><%= @recipe.description %></p>
+  <% if @recipe.owner?(current_user) %>
   <div class="recipe-show-btn-group">
     <%= link_to user_shopping_lists_path(user_id:@user.id) do %>
     <button>Generate shopping list</button>
@@ -31,6 +32,7 @@
     <button>Add ingredient</button>
     <% end %>
   </div>
+  <% end %>
   <div>
     <table class="ingredients-table">
       <thead>
