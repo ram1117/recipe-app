@@ -27,12 +27,11 @@ RSpec.describe Food, type: :model do
     expect(@food).to be_valid
   end
   it 'is not valid without price' do
-    @food.price
+    @food.price >= 0
     expect(@food).to be_valid
   end
   it 'is not valid without quantity' do
-    @food.quantity >= 0 && @food.quantity == 'integer'
+    @food.quantity >= 0 && @food.quantity == "integer"
     expect(@food).to be_valid
   end
 end
-# validates :quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
