@@ -1,0 +1,7 @@
+<nav class="nav-bar">
+  <h2>Recipe App</h2>
+  <ul class="nav-menu">
+    <li class="nav-items"><%= link_to "Home",users_path %></li>
+    <li class="nav-items"><%= link_to "Logout",destroy_user_session_path,data:{turbo_method: :delete}  %></li>
+  </ul>
+</nav>

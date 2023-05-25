@@ -1,12 +1,13 @@
 <div>
-  <h1>Recipe App</h1>
+  <p class="current-user">logged as : <%= @user.name%></p>
   <div class="main-menu">
-    <div class="menu-item">
-      <%= link_to "Food Items", user_foods_path(user_id:1) %>
+    <div class="main-menu-item">
+      <h3>Add food items</h3>
+      <h3><%= link_to "Food Items", user_foods_path(user_id:@user.id) %></h3>
     </div>
-    <div class="menu-item">
-      <%= link_to "Recipes", user_recipes_path(user_id:1) %>
+    <div class="main-menu-item">
+      <h3>View your Recipes</h3>
+      <h3><%= link_to "Recipes", user_recipes_path(user_id:@user.id) %></h3>
     </div>
   </div>
 </div>
-

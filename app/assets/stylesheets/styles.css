@@ -97,7 +97,8 @@ input:checked + .slider::before {
   cursor: pointer;
 }
 
-.ingredients-table {
+.ingredients-table,
+.shop-list-table {
   width: 70%;
   margin: 5% 0;
   border-collapse: collapse;
@@ -129,12 +130,15 @@ input:checked + .slider::before {
   font-size: 1.3rem;
 }
 
-.ingredients-table thead {
+.ingredients-table thead,
+.shop-list-table thead {
   text-align: left;
 }
 
 .ingredients-table th,
-.ingredients-table td {
+.shop-list-table th,
+.ingredients-table td,
+.shop-list-table td {
   padding: 0.5rem;
   border-bottom: 1px solid grey;
 }
@@ -158,36 +162,52 @@ input:checked + .slider::before {
   padding: 1rem;
 }
 
+.recipes-list-item {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+}
+
 .recipes-list-item a {
   text-decoration: none;
   color: black;
 }
 
-.recipes-list-item {
-  margin: 1.5rem 0;
-  padding: 1.5rem;
-  border: solid 1px black;
-}
-
-.recipe-items-container {
-  display: flex;
-}
-
-.recipe-title-group {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.recipe-title-group button {
-  padding: 0.5rem;
-  border: solid 1px black;
-  background: none;
-  cursor: pointer;
-}
-
-.recipe-short-detail {
+.recipe-items-details {
   width: 80%;
+}
+
+.recipe-items-details > h2,
+.recipe-items-details > p {
+  margin: 1rem 0;
+}
+
+.recipes-list-item button {
+  padding: 0.8rem;
+}
+
+.current-user {
+  float: right;
+  margin: 0 5rem;
+}
+
+.main-menu {
+  clear: both;
+  width: 50%;
+  margin: 5rem auto;
+  border: solid 2px black;
+  padding: 3rem;
+}
+
+.main-menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
+.shop-list-container {
+  width: 80%;
+  margin: 5rem auto;
 }
