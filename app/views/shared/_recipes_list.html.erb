@@ -5,18 +5,16 @@
   <ul class="recipes-list">
     <% recipes.each do |recipe|%>
     <li class="recipes-list-item">
-      <%= link_to user_recipe_path(user_id: userid,id: recipe.id) do %>
-      <div class="recipe-items-container">
-        <div class="recipe-title-group">
+      <%= link_to user_recipe_path(user_id: user.id,id: recipe.id) do %>
+      <div class="recipe-items-details">
           <h2><%= recipe.name%></h2>
-          <%= link_to user_recipe_path(user_id:userid,id:recipe.id), data: {turbo_method: :delete} do %>
-          <button>Remove</button>
-          <% end %>
-        </div>
-        <div class="recipe-short-detail">
           <p><%= recipe.description %></p>
-        </div>
       </div>
+      <% end %> 
+      <% if recipe.owner?(user) %>
+      <%= link_to user_recipe_path(user_id:user.id,id:recipe.id), data: {turbo_method: :delete} do %>
+      <button>Remove</button>
+      <% end %>
       <% end %>
     </li>
     <% end %> <% end %>

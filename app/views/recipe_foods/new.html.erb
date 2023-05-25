@@ -1,5 +1,6 @@
 <div class="ing-form-container">
   <h1>Add new Ingredient</h1>
+  <% if @recipe.owner?(current_user) %>
   <div class="ingredient_form">
     <%= form_with url:
     user_recipe_recipe_foods_path(user_id:@current_user.id,recipe_id:@recipe.id),
@@ -14,4 +15,8 @@
   <p>If the food item is not in the list, please add it here
     <%= link_to "Add Food Item", new_user_food_path(user_id:1) %>
   </p>
-</div>
+  </div>
+  <% else %>
+  <h2>Oops!.. you don't have permission modify this recipe</h2>
+  <% end %>
+  
