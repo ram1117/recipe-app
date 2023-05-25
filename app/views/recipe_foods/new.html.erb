@@ -13,7 +13,7 @@
     <% end %>
   </div>
   <p>If the food item is not in the list, please add it here
-    <%= link_to "Add Food Item", new_user_food_path(user_id:1) %>
+    <%= link_to "Add Food Item", new_user_food_path(user_id:current_user.id) %>
   </p>
   </div>
   <% else %>

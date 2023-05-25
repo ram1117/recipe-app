@@ -12,8 +12,6 @@ class RecipesController < ApplicationController
     @recipe_foods = @recipe.recipe_foods
   end
 
-  def update; end
-
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy

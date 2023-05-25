@@ -8,9 +8,17 @@ class Recipe < ApplicationRecord
   validates :preparation_time, presence: true, numericality: { greater_than_or_equal_to: 0.0 }
   validates :cooking_time, presence: true, numericality: { greater_than_or_equal_to: 0.0 }
 
-  def total_food_items; end
+  def total_food_items
+    recipe_foods.count
+  end
 
-  def total_price; end
+  def total_price
+    total = 0
+    recipe_foods.each do |item|
+      total += (item.quantity * item.food.price)
+    end
+    total
+  end
 
   def owner?(user)
     self.user == user
