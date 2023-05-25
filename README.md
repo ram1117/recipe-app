@@ -30,7 +30,7 @@
 - Add Food
 - Add user
 - Add Recipe
-- User Authentication
+- Add User Authentication
 - View Food and Recipe
 
 
