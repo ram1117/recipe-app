@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'recipe_foods/new'
   get 'recipe_foods/update'
   get 'recipe_foods/destroy'
+
   # get 'user/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
       resources :recipe_foods, only: %i[new create edit update destroy]
     end
   end
+  resources :public_recipes, only: [:index]
 end

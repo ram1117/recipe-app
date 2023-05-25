@@ -204,3 +204,56 @@
 }
 
 /* ----new.html end---- */
+
+/* CSS for the public recipes container */
+.public_recipes_container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CSS for the centered heading */
+.public_recipes_container h2 {
+  text-align: center;
+}
+
+/* CSS for the recipe name link */
+.public_recipes_container h4 a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* CSS for the user name paragraph */
+.public_recipes_container p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* CSS for the list items */
+.public_recipes_container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* CSS for the list item */
+.public_recipes_container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid#212529;
+  gap: 10px;
+}
+
+/* CSS for the right side content */
+.public_recipes_container .right-side {
+  text-align: right;
+}
