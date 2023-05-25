@@ -59,3 +59,135 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
+
+.recipe-div {
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.recipe-div h3 {
+  margin: 1rem;
+}
+
+.toggle {
+  width: 10rem;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recipe-detail {
+  clear: both;
+  width: 70%;
+  font-size: 1.1rem;
+  margin: 5% 0;
+}
+
+.recipe-show-btn-group {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.recipe-show-btn-group button {
+  padding: 1rem;
+  border: 2px solid black;
+  background: none;
+  cursor: pointer;
+}
+
+.ingredients-table {
+  width: 70%;
+  margin: 5% 0;
+  border-collapse: collapse;
+  border-spacing: 0 2rem;
+}
+
+.ing-form-container {
+  width: 70%;
+  margin: 5rem auto;
+  padding: 5rem;
+  border: solid 1px black;
+}
+
+.ing-form-container p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.ingredient_form form {
+  width: 70%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredient_form form * {
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.ingredients-table thead {
+  text-align: left;
+}
+
+.ingredients-table th,
+.ingredients-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid grey;
+}
+
+.ingredients-table a {
+  color: blue;
+  margin-right: 1rem;
+}
+
+.recipes-section {
+  width: 90%;
+  margin: 10% auto;
+}
+
+.recipes-section h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.recipes-container {
+  padding: 1rem;
+}
+
+.recipes-list-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.recipes-list-item {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: solid 1px black;
+}
+
+.recipe-items-container {
+  display: flex;
+}
+
+.recipe-title-group {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe-title-group button {
+  padding: 0.5rem;
+  border: solid 1px black;
+  background: none;
+  cursor: pointer;
+}
+
+.recipe-short-detail {
+  width: 80%;
+}
