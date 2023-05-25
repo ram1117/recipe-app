@@ -8,8 +8,9 @@
 
 #   Character.create(name: "Luke", movie: movies.first)
 
+RecipeFood.destroy_all
+Recipe.destroy_all
 Food.destroy_all
-
 User.destroy_all
 
 user1 = User.create(name: 'J. kent', email: 'user1@test.com', password: 'password')
@@ -103,8 +104,20 @@ Recipe.create([
                 }
               ])
 
+RecipeFood.create([
+                    {
+                      quantity: 13,
+                      recipe: Recipe.first,
+                      food: Food.first
+                    },
+                    {
+                      quantity: 2,
+                      recipe: Recipe.first,
+                      food: Food.second
+                    }
+                  ])
+
 print "Added #{Food.count} foods \n"
-
 print "Added #{User.count} users \n"
-
 print "Added #{Recipe.count} recipes \n"
+print "Added #{RecipeFood.count} recipe foods \n"
