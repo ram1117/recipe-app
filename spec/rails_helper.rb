@@ -41,6 +41,11 @@ RSpec.configure do |config|
 
   # configuration for devise helpers
   config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Warden::Test::Helpers
+
+  config.after :each do
+    Warden.test_reset!
+  end
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
