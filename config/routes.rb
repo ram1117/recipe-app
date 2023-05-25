@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'shopping_list/index'
   get 'recipe_foods/new'
   get 'recipe_foods/update'
   get 'recipe_foods/destroy'
@@ -13,5 +14,6 @@ Rails.application.routes.draw do
     resources :recipes, only: %i[index show update destroy] do
       resources :recipe_foods, only: %i[new create edit update destroy]
     end
+    resources :shopping_lists, only: %i[index]
   end
 end

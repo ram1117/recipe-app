@@ -6,7 +6,7 @@
     user_recipe_recipe_foods_path(user_id:@current_user.id,recipe_id:@recipe.id),
     method: :post,scope: :new_recipe_food,local:true  do |form| %> 
     <%= form.label :name, "Select food" %> 
-    <%= form.collection_select :food_id, Food.all,:id,:name %> 
+    <%= form.collection_select :food_id, Food.where(user_id:current_user.id),:id,:name %> 
     <%= form.label :qty, "Quantity" %> 
     <%= form.number_field :qty, min:0 %>
     <%= form.submit%>
