@@ -11,6 +11,7 @@ class Recipe < ApplicationRecord
   def total_food_items; end
 
   def total_price; end
+
   def owner?(user)
     self.user == user
   end
