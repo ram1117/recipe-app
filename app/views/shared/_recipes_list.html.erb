@@ -9,7 +9,9 @@
       <div class="recipe-items-container">
         <div class="recipe-title-group">
           <h2><%= recipe.name%></h2>
+          <%= link_to user_recipe_path(user_id:userid,id:recipe.id), data: {turbo_method: :delete} do %>
           <button>Remove</button>
+          <% end %>
         </div>
         <div class="recipe-short-detail">
           <p><%= recipe.description %></p>

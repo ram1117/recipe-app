@@ -1,13 +1,12 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @user = User.first
+    @user = current_user
     @recipes = Recipe.where(user_id: @user.id)
   end
 
   def show
-    @user = User.first
-    # update current user after devise
+    @user = current_user
     @recipe = Recipe.find(params[:id])
     @foods = @recipe.foods
     @recipe_foods = @recipe.recipe_foods

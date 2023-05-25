@@ -12,65 +12,40 @@ Food.destroy_all
 
 User.destroy_all
 
-user1 = User.create(name: 'J. kent')
-user2 = User.create(name: 'Wes Gibbins')
+user1 = User.create(name: 'J. kent', email: 'user1@test.com', password: 'password')
+user2 = User.create(name: 'Wes Gibbins', email: 'user2@test.com', password: 'password')
 
 Food.create([
-
               {
-
                 name: 'banana',
-
                 measurement_unit: 'units',
-
                 price: 1.5,
-
                 quantity: 10,
-
                 user_id: user1.id
-
               },
 
               {
-
                 name: 'flour',
-
                 measurement_unit: 'kilograms',
-
                 price: 3.00,
-
                 quantity: 5,
-
                 user_id: user1.id
-
               },
 
               {
-
                 name: 'potatoes',
-
                 measurement_unit: 'kilograms',
-
                 price: 2.5,
-
                 quantity: 4,
-
                 user_id: user1.id
-
               },
 
               {
-
                 name: 'tuna',
-
                 measurement_unit: 'kilograms',
-
                 price: 5,
-
                 quantity: 2,
-
                 user_id: user2.id
-
               }
 
             ])

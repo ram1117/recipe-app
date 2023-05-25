@@ -1,12 +1,12 @@
 class RecipeFoodsController < ApplicationController
   def new
     @recipe_food = RecipeFood.new
-    @current_user = User.first
+    @current_user = current_user
     @recipe = Recipe.find(params[:recipe_id])
   end
 
   def create
-    user = User.first
+    user = current_user
     recipe = Recipe.find(params[:recipe_id])
     recipe_food = RecipeFood.new({
                                    quantity: recipe_food_params['qty'],
@@ -22,7 +22,7 @@ class RecipeFoodsController < ApplicationController
   end
 
   def edit
-    @current_user = User.first
+    @current_user = current_user
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = RecipeFood.find(params[:id])
   end
