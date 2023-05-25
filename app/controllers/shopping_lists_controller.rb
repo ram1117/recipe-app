@@ -5,7 +5,7 @@ class ShoppingListsController < ApplicationController
     recipe_ids = @recipes.pluck(:id)
     r_foods = RecipeFood.where(recipe_id: recipe_ids).group(:food_id).sum(:quantity)
     @shopping_list = []
-    
+
     r_foods.keys.each do |food_id|
       food = Food.find(food_id)
       needed_food = food.quantity - r_foods[food_id]
