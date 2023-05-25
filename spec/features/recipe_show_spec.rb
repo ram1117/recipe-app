@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Recipe#Index', type: :system do
+RSpec.describe 'Recipe#Show', type: :system do
   before :each do
     @user = User.first
     @recipe = @user.recipes.first
@@ -38,7 +38,6 @@ RSpec.describe 'Recipe#Index', type: :system do
     visit user_recipe_path(user_id: @user.id, id: @recipe.id)
     first('a', text: 'Delete').click
     sleep 1
-    # table = page.find(:css, 'table#my_table_id')
     row_count = all('.ingredients-table tr').count
     expect(row_count).to eql 2
   end

@@ -16,7 +16,7 @@ RSpec.describe 'Recipe#Index', type: :system do
     visit user_recipes_path(user_id: @user.id)
     click_link('Banana bread')
     sleep 2
-    expect(current_path).to eql ("/users/#{@user.id}/recipes/#{@recipe.id}")
+    expect(current_path).to eql("/users/#{@user.id}/recipes/#{@recipe.id}")
   end
   it "clicking 'remove' button removes the recipe" do
     visit user_recipes_path(user_id: @user.id)
