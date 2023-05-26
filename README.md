@@ -32,6 +32,7 @@
 - Add Recipe
 - Add User Authentication
 - View Food and Recipe
+- Add test
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
