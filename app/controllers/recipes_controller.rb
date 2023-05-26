@@ -2,14 +2,13 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!
   def index
     @user = current_user
-    @recipes = Recipe.where(user_id: @user.id)
+    @recipes = @user.recipes
   end
 
   def show
     @user = current_user
     @recipe = Recipe.find(params[:id])
-    @foods = @recipe.foods
-    @recipe_foods = @recipe.recipe_foods
+    @recipe_foods = @recipe.recipe_foods.includes([:food])
   end
 
   def destroy
