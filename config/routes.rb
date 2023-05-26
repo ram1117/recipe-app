@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   root 'users#index'
   resources :users, only: %i[index] do
     resources :foods, only: %i[index show new create destroy]
-    resources :recipes, only: %i[index new create show destroy] do
+    resources :recipes, only: %i[index new create show update destroy] do
       resources :recipe_foods, only: %i[new create edit update destroy]
     end
     resources :shopping_lists, only: %i[index]

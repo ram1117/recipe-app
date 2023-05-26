@@ -13,14 +13,19 @@
       Private
       <% end %>
     </h4>
+    <%= form_with  url: 
+    user_recipe_path(user_id: @user.id,id:@recipe.id),
+    method: :patch, scope: :update_recipe,local:true do |f|
+    %>
     <label class="switch">
       <% if @recipe.public %>
-      <input type="checkbox" checked />
+      <%= f.check_box :public , checked: true,  onchange: 'this.form.submit();' %>
       <% else %>
-      <input type="checkbox" />
+      <%= f.check_box :public , checked: false, onchange: 'this.form.submit();'  %>
       <% end %>
       <span class="slider round"></span>
     </label>
+    <% end %>
   </div>
   <% end %>
   
