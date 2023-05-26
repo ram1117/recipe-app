@@ -107,28 +107,25 @@ input:checked + .slider::before {
   border-spacing: 0 2rem;
 }
 
-.new-recipe-form-container h1{
+.new-recipe-form-container h1 {
   text-align: center;
 }
 
 .ing-form-container,
-.new-recipe-form-container
-{
+.new-recipe-form-container {
   width: 70%;
   margin: 5rem auto;
   padding: 5rem;
   border: solid 1px #353535;
 }
 
-.ing-form-container p
- {
+.ing-form-container p {
   text-align: center;
   font-size: 1.2rem;
 }
 
 .ingredient_form form,
-.new-recipe-form form
-{
+.new-recipe-form form {
   width: 70%;
   margin: 5rem auto;
   display: flex;
@@ -136,8 +133,7 @@ input:checked + .slider::before {
 }
 
 .ingredient_form form *,
-.new-recipe-form form *
-{
+.new-recipe-form form * {
   padding: 1rem;
   margin: 0.5rem;
   font-size: 1.3rem;

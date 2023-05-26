@@ -39,5 +39,4 @@ RSpec.describe 'Users#Index', type: :system do
     sleep 2
     expect(current_path).to eql "/users/#{@user.id}/recipes/new"
   end
-
 end

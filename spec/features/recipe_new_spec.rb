@@ -17,7 +17,7 @@ RSpec.describe 'Recipe#New', type: :system do
     fill_in 'new_recipe_preparation_time', with: 0.75
     fill_in 'new_recipe_cooking_time', with: 1.75
     fill_in 'new_recipe_description',
-            with: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+            with: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut'
     find('input[name="commit"]').click
     sleep 2
     expect(current_path).to eql "/users/#{@user.id}/recipes"
