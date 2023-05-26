@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  color: #353535;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -25,6 +30,11 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+
+.flash-message {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .custom-button {
@@ -213,11 +223,11 @@
 /* CSS for the public recipes container */
 .public_recipes_container {
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: solid 1px #353535;
+  box-shadow: 10px 5px #8d8d8d;
   padding: 2rem;
   width: 50%;
-  margin: 10rem auto;
+  margin: 5rem auto;
   align-items: center;
   justify-content: center;
 }
@@ -235,7 +245,7 @@
 .public_recipes_container ul li {
   margin: 3rem 0;
   padding: 2rem;
-  border: solid 1px black;
+  border: solid 1px #353535;
 }
 
 /* CSS for the centered heading */

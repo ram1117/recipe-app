@@ -4,6 +4,7 @@
   <h3>Cooking Time: 
     <%= @recipe.cooking_time %>
   </h3>
+  <% if @recipe.owner?(current_user) %>
   <div class="toggle">
     <h4>
       <%if @recipe.public == true %>
@@ -21,6 +22,7 @@
       <span class="slider round"></span>
     </label>
   </div>
+  <% end %>
   
   <p class="recipe-detail"><%= @recipe.description %></p>
   <% if @recipe.owner?(current_user) %>

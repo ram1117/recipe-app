@@ -92,7 +92,9 @@ input:checked + .slider::before {
 
 .recipe-show-btn-group button {
   padding: 1rem;
-  border: 2px solid black;
+  border: 2px solid #8d8d8d;
+  color: #353535;
+  font-weight: 700;
   background: none;
   cursor: pointer;
 }
@@ -109,7 +111,7 @@ input:checked + .slider::before {
   width: 70%;
   margin: 5rem auto;
   padding: 5rem;
-  border: solid 1px black;
+  border: solid 1px #353535;
 }
 
 .ing-form-container p {
@@ -140,7 +142,7 @@ input:checked + .slider::before {
 .ingredients-table td,
 .shop-list-table td {
   padding: 0.5rem;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #8d8d8d;
 }
 
 .ingredients-table a {
@@ -150,12 +152,11 @@ input:checked + .slider::before {
 
 .recipes-section {
   width: 90%;
-  margin: 10% auto;
+  margin: 5rem auto;
 }
 
 .recipes-section h1 {
   text-align: center;
-  margin: 2rem 0;
 }
 
 .recipes-container {
@@ -165,18 +166,20 @@ input:checked + .slider::before {
 .recipes-list-item {
   margin: 1.5rem 0;
   padding: 1.5rem;
-  border: solid 1px black;
+  border: solid 1px #353535;
+  box-shadow: 10px 5px #8d8d8d;
   display: flex;
   align-items: center;
 }
 
 .recipes-list-item a {
   text-decoration: none;
-  color: black;
+  color: #353535;
 }
 
 .recipe-items-details {
   width: 80%;
+  color: #353535;
 }
 
 .recipe-items-details > h2,
@@ -185,7 +188,12 @@ input:checked + .slider::before {
 }
 
 .recipes-list-item button {
-  padding: 0.8rem;
+  padding: 1rem;
+  border: 2px solid #8d8d8d;
+  color: #353535;
+  font-weight: 700;
+  background: none;
+  cursor: pointer;
 }
 
 .current-user {
@@ -195,19 +203,34 @@ input:checked + .slider::before {
 
 .main-menu {
   clear: both;
-  width: 50%;
+  width: 90%;
   margin: 5rem auto;
-  border: solid 2px black;
-  padding: 3rem;
+  border: solid 1px #353535;
+  box-shadow: 10px 5px #8d8d8d;
+  padding: 1rem;
 }
 
 .main-menu-item {
   display: flex;
   justify-content: space-between;
   margin: 3rem 0;
+  word-wrap: break-word;
+}
+
+.main-menu-item a {
+  text-decoration: none;
+  color: #337ab7;
 }
 
 .shop-list-container {
   width: 80%;
   margin: 5rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .main-menu {
+    width: 50%;
+    margin: 5rem auto;
+    padding: 3rem;
+  }
 }
