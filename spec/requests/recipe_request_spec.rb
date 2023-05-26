@@ -38,6 +38,20 @@ RSpec.describe 'Recipes', type: :request do
     end
   end
 
+  describe 'POST user/[:user_id]/recips/' do
+    it 'creates a new recipe for the particular user' do
+      post user_recipes_path(user_id: @user.id),
+           params: { new_recipe: {
+             name: 'MY recipe for chocolate shake',
+             preparation_time: 0.25,
+             cooking_time: 0.5,
+             description: 'Simple steps to prepare chocolate milkshake',
+             public: true
+           } }
+      expect(@user.recipes.count).to eql 3
+    end
+  end
+
   describe 'DELETE user/[:user_id]/recipe/[:recipe_id]' do
     it 'deletes a Recipe' do
       delete user_recipe_path(user_id: @user.id, id: @user.recipes.first.id)

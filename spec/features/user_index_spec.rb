@@ -32,4 +32,12 @@ RSpec.describe 'Users#Index', type: :system do
     sleep 2
     expect(current_path).to eql '/public_recipes'
   end
+
+  it "click 'Create New Recipe' link redirects to Recipes#New page" do
+    visit users_path(user_id: @user.id)
+    click_link('New Recipe')
+    sleep 2
+    expect(current_path).to eql "/users/#{@user.id}/recipes/new"
+  end
+
 end
