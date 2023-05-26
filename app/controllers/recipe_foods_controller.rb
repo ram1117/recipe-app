@@ -29,23 +29,31 @@ class RecipeFoodsController < ApplicationController
 
   def update
     @recipe_item = RecipeFood.find(params[:id])
-    @recipe_item.update_column(:quantity, update_food_params['qty'])
-    redirect_to user_recipe_path(user_id: params[:user_id], id: params[:recipe_id])
+    if @recipe_item.update_column(:quantity, update_food_params['qty'])
+      flash[:success] = 'recipe food updated successfully'
+      redirect_to user_recipe_path(user_id: params[:user_id], id: params[:recipe_id])
+    else
+      flash[:alert] = 'error updating recipe food'
+    end
   end
 
   def destroy
     recipe_food = RecipeFood.find(params[:id])
-    recipe_food.destroy
-    redirect_to user_recipe_path(user_id: params[:user_id], id: params[:recipe_id])
+    if recipe_food.destroy
+      flash[:success] = 'recipe food deleted successfully'
+      redirect_to user_recipe_path(user_id: params[:user_id], id: params[:recipe_id])
+    else
+      flash[:alert] = 'error deleting recipe food'
+    end
   end
-end
 
-private
+  private
 
-def recipe_food_params
-  params.require(:new_recipe_food).permit(:food_id, :qty)
-end
+  def recipe_food_params
+    params.require(:new_recipe_food).permit(:food_id, :qty)
+  end
 
-def update_food_params
-  params.require(:update_recipe_food).permit(:qty)
+  def update_food_params
+    params.require(:update_recipe_food).permit(:qty)
+  end
 end
