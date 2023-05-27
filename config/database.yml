@@ -79,5 +79,5 @@ test:
 production:
   <<: *default
   database: recipe_app_production
-  username: postgres
+  username: recipeapp
   password: <%= ENV["RECIPE_APP_DATABASE_PASSWORD"] %>
