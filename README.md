@@ -3,6 +3,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+- [Live Demo](#live-demo)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -19,6 +20,10 @@
 - [📝 License](#license)
 
 # 📰 Recipe-App <a name="about-project"></a>
+
+### Live Demo <a name="live-demo"></a>
+
+The web service is hosted on Render [in this link](https://beta-recipe-app.onrender.com/)
 
 ### Tech Stack <a name="tech-stack"></a>
 
